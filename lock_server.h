@@ -14,12 +14,10 @@ class lock_server {
 
  protected:
   int nacquire;
-  pthread_mutex_t lock_server_mutex;
 
  private:
+  pthread_mutex_t lock_server_mutex;
   std::map<lock_protocol::lockid_t, lock_t> locks_table;
-  //std::map<lock_protocol::lockid_t, lockstate_t> locks_state_table;
-  //std::map<lock_protocol::lockid_t, pthread_cond_t> locks_cond_table;
 
  public:
   lock_server();
