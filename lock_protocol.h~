@@ -30,11 +30,6 @@ struct lock_t{
     { 
         pthread_cond_init(&lock_cond,NULL);
     }
-    
-    ~lock_t()
-    {
-        pthread_cond_destroy(&lock_cond);
-    }
 };
 
 #endif 
