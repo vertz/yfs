@@ -660,7 +660,7 @@ rpcs::rpcstate_t
 rpcs::checkduplicate_and_update(unsigned int clt_nonce, unsigned int xid,
 		unsigned int xid_rep, char **b, int *sz)
 {
-	ScopedLock rwl(&reply_window_m_);
+    ScopedLock rwl(&reply_window_m_);
     
     bool isForgotten = true;
     
@@ -712,7 +712,7 @@ void
 rpcs::add_reply(unsigned int clt_nonce, unsigned int xid,
 		char *b, int sz)
 {
-	ScopedLock rwl(&reply_window_m_);
+    ScopedLock rwl(&reply_window_m_);
     
     for(std::list<reply_t>::iterator it = reply_window_[clt_nonce].begin();
         it != reply_window_[clt_nonce].end(); ++it)
