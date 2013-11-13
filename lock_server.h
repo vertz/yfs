@@ -28,7 +28,6 @@ class lock_server {
   lock_protocol::status release(int clt, lock_protocol::lockid_t lid, int &);
 };
 
-
 #endif 
 
 
