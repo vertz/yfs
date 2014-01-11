@@ -3,7 +3,7 @@ yfs
 
 a multi-server file system called Yet Another File System (yfs) in the spirit of Frangipani.
 
-![file server architecture](/include/yfs.png)
+![file server architecture](include/yfs.png)
 
 Each client host will run a copy of yfs. Each yfs will create a file system visible to applications on the same machine, and FUSE will forward application file system operations to yfs. All the yfs instances will store file system data in a single shared "extent" server, so that all client machines will see a single shared file system.
 
